@@ -16,45 +16,6 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
@@ -144,16 +105,95 @@ const pages = document.querySelectorAll("[data-page]");
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    const clickedLink = this;
+    const targetPage = this.innerText.trim().toLowerCase().replace(/\s+/g, "-");
+
+    for (let j = 0; j < pages.length; j++) {
+      if (targetPage === pages[j].dataset.page) {
+        pages[j].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        pages[j].classList.remove("active");
+      }
+    }
+
+    for (let j = 0; j < navigationLinks.length; j++) {
+      if (navigationLinks[j] === clickedLink) {
+        navigationLinks[j].classList.add("active");
+      } else {
+        navigationLinks[j].classList.remove("active");
       }
     }
 
   });
 }
+
+
+// project modal variables
+const projectItems = document.querySelectorAll("[data-project-item]");
+const projectModalContainer = document.querySelector("[data-project-modal-container]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+const projectModalClose = document.querySelector("[data-project-modal-close]");
+const projectModalBadge = document.querySelector("[data-project-modal-badge]");
+const projectModalYear = document.querySelector("[data-project-modal-year]");
+const projectModalTitle = document.querySelector("[data-project-modal-title]");
+const projectModalDesc = document.querySelector("[data-project-modal-desc]");
+const projectModalTags = document.querySelector("[data-project-modal-tags]");
+
+// project modal toggle function
+const projectModalFunc = function () {
+  projectModalContainer.classList.toggle("active");
+  projectOverlay.classList.toggle("active");
+}
+
+// add click event to all project cards
+for (let i = 0; i < projectItems.length; i++) {
+  projectItems[i].addEventListener("click", function () {
+
+    const badgeClass = this.dataset.badgeClass;
+    const badge = this.dataset.badge;
+    const year = this.dataset.year;
+    const title = this.dataset.title;
+    const desc = this.dataset.desc;
+    const tags = this.dataset.tags.split(",");
+
+    // set badge
+    projectModalBadge.className = "journey-badge " + badgeClass;
+    projectModalBadge.innerText = badge;
+
+    // set year, title, desc
+    projectModalYear.innerText = year;
+    projectModalTitle.innerText = title;
+    projectModalDesc.innerText = desc;
+
+    // set tags
+    projectModalTags.innerHTML = "";
+    tags.forEach(function (tag) {
+      const li = document.createElement("li");
+      li.className = "journey-tag";
+      li.innerText = tag.trim();
+      projectModalTags.appendChild(li);
+    });
+
+    projectModalFunc();
+  });
+}
+
+// close modal on button and overlay click
+projectModalClose.addEventListener("click", projectModalFunc);
+projectOverlay.addEventListener("click", projectModalFunc);
+
+
+// transcript modal
+const transcriptBtn = document.querySelector("[data-transcript-btn]");
+const transcriptModal = document.querySelector("[data-transcript-modal]");
+const transcriptClose = document.querySelector("[data-transcript-close]");
+const transcriptOverlay = document.querySelector("[data-transcript-overlay]");
+
+const transcriptModalFunc = function () {
+  transcriptModal.classList.toggle("active");
+};
+
+if (transcriptBtn) transcriptBtn.addEventListener("click", transcriptModalFunc);
+if (transcriptClose) transcriptClose.addEventListener("click", transcriptModalFunc);
+if (transcriptOverlay) transcriptOverlay.addEventListener("click", transcriptModalFunc);
