@@ -49,7 +49,7 @@
           <h1 class="name" title="Mathurada Meepan">Mathurada Meepan</h1>
           <h1 class="nick-name" title="Mathurada Meepan">Mook</h1>
 
-          <p class="title">Mobile Developer</p>
+          <p class="title">Software Developer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -75,7 +75,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" title="mathuradamook@gmail.com"
+              <a href="mailto:mathuradamook@gmail.com" title="mathuradamook@gmail.com"
                 class="contact-link">mathuradamook@gmail.com</a>
             </div>
 
@@ -188,13 +188,13 @@
 
         <section class="about-text">
           <p>
-            A proactive 3rd-year Information Technology student at Kasetsart University with a solid grasp of software
-            development fundamentals.
-            My primary interests lie in both Web and Mobile Application Development, with a dedicated focus on creating
-            intuitive and user-friendly digital solutions.
-            As a fast learner who is always open to embracing new technologies, I am seeking an internship opportunity
-            where I can apply my current knowledge in web and mobile platforms,
-            learn from experienced professionals, and contribute to real-world projects.
+            I'm a developer with a designer's eye. I enjoy taking an app from a rough sketch in Figma all the way to
+            something live on a real server, and I like bringing a bit of personality and playfulness into what I build.
+          </p>
+          <p>
+            I'm completing my B.S. in Information Technology at Kasetsart University in 3.5 years (Nov 2026), with
+            hands-on projects in Flutter, full-stack web development and RAG-based AI applications. I learn best by
+            building, breaking things, and figuring out why, and I'm looking for a team where I can keep doing exactly that.
           </p>
         </section>
 
@@ -245,8 +245,8 @@
                 <h4 class="h4 service-item-title">Web development</h4>
 
                 <p class="service-item-text">
-                  Developing responsive and functional websites with a focus on clean code, performance, and modern web
-                  technologies.
+                  Building full-stack web apps with React, Node.js and FastAPI, from database design and authentication to
+                  deployment on real servers.
                 </p>
               </div>
 
@@ -272,15 +272,15 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-presentation.png" alt="camera icon" width="40">
+                <img src="./assets/images/icon-dev.png" alt="AI application icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Presentation Design</h4>
+                <h4 class="h4 service-item-title">AI-powered apps</h4>
 
                 <p class="service-item-text">
-                  Creating visually engaging and well-structured presentations that effectively communicate complex
-                  information through clean and modern design.
+                  Building LLM features with Retrieval-Augmented Generation, from embeddings and vector search to
+                  answer evaluation, and connecting them to real apps and backends.
                 </p>
               </div>
 
@@ -299,6 +299,52 @@
           <h3 class="h3 testimonials-title">Featured Projects</h3>
 
           <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-project-item data-title="Mutelove" data-badge="AI + Mobile App"
+                data-badge-class="badge-ai" data-year="2026"
+                data-desc="A Thai fortune-telling app using Retrieval-Augmented Generation. Built the retrieval pipeline with Gemini embeddings and ChromaDB, evaluated it with Hit Rate@k, MRR and LLM-as-judge faithfulness, and deployed the FastAPI backend on Render with GitHub Actions CI/CD for Android user testing."
+                data-tags="Flutter,FastAPI,PostgreSQL,ChromaDB,Gemini API">
+                <div class="journey-card-top">
+                  <span class="journey-badge badge-ai">AI + Mobile App</span>
+                  <span class="journey-year">2026</span>
+                </div>
+                <h4 class="h4 testimonials-item-title">Mutelove</h4>
+                <div class="testimonials-text">
+                  <p>Special Problem (senior project), Kasetsart University.</p>
+                </div>
+                <ul class="journey-tags">
+                  <li class="journey-tag">Flutter</li>
+                  <li class="journey-tag">FastAPI</li>
+                  <li class="journey-tag">PostgreSQL</li>
+                  <li class="journey-tag">ChromaDB</li>
+                  <li class="journey-tag">Gemini API</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-project-item data-title="Pawject" data-badge="Web Dev"
+                data-badge-class="badge-web" data-year="2026"
+                data-desc="A team workspace web app with task boards, calendar and messaging. Responsible for development: built the React frontend and Node.js/Express backend with Prisma and PostgreSQL, implemented JWT and social login (Google, GitHub), and deployed on a Linux VPS with nginx, pm2 and HTTPS."
+                data-tags="React,Node.js,Prisma,PostgreSQL,nginx">
+                <div class="journey-card-top">
+                  <span class="journey-badge badge-web">Web Dev</span>
+                  <span class="journey-year">2026</span>
+                </div>
+                <h4 class="h4 testimonials-item-title">Pawject</h4>
+                <div class="testimonials-text">
+                  <p>IT Project course, team of 2. Responsible for development.</p>
+                </div>
+                <ul class="journey-tags">
+                  <li class="journey-tag">React</li>
+                  <li class="journey-tag">Node.js</li>
+                  <li class="journey-tag">Prisma</li>
+                  <li class="journey-tag">PostgreSQL</li>
+                  <li class="journey-tag">nginx</li>
+                </ul>
+              </div>
+            </li>
 
             <li class="testimonials-item">
               <div class="content-card" data-project-item data-title="Portfolio Website" data-badge="Web Dev"
@@ -345,16 +391,16 @@
 
             <li class="testimonials-item">
               <div class="content-card" data-project-item data-title="Library Smart App"
-                data-badge="Mobile App + Web Demo" data-badge-class="badge-app" data-year="2026"
+                data-badge="Mobile App + Web Demo" data-badge-class="badge-app" data-year="2025"
                 data-desc="Developed an IoT solution using ESP32 to maintain a quiet environment in the library. The system monitors ambient noise levels and triggers a visual/audio alert when the threshold is exceeded. 
                 It includes a manual reset button to dismiss alerts and adjustable sensitivity to suit different library zones." data-tags="Flutter,Firebase,Dart">
                 <div class="journey-card-top">
                   <span class="journey-badge badge-app">Mobile App + Web Demo</span>
-                  <span class="journey-year">2026</span>
+                  <span class="journey-year">2025</span>
                 </div>
                 <h4 class="h4 testimonials-item-title">Library Smart App</h4>
                 <div class="testimonials-text">
-                  <p>Developed for Internet of Things (IoT) course.</p>
+                  <p>Developed for Internet of Things (IoT) course, team of 3.</p>
                 </div>
                 <ul class="journey-tags">
                   <li class="journey-tag">Flutter</li>
@@ -438,11 +484,12 @@
 
               <h4 class="h4 timeline-item-title">Kasetsart University</h4>
 
-              <span>2023 — Now</span>
+              <span>2023 — 2026</span>
 
               <p class="timeline-text">
                 Faculty of Arts and Sciences
                 B.S. in Information Technology
+                <br>Expected graduation: Nov 2026 (3.5 years) · GPA 3.36
               </p>
 
               <button class="transcript-btn" data-transcript-btn>
@@ -518,18 +565,42 @@
               <div class="skill-level-group">
                 <span class="skill-level-label skill-level-proficient">⭐ Proficient</span>
                 <div class="skill-tags">
-                  <span class="skill-tag skill-tag-proficient">Dart (Flutter)</span>
+                  <span class="skill-tag skill-tag-proficient">Dart</span>
                 </div>
               </div>
               <div class="skill-level-group">
-                <span class="skill-level-label skill-level-knowledge">📘 Knowledgeable</span>
+                <span class="skill-level-label skill-level-knowledge">📘 Familiar</span>
                 <div class="skill-tags">
-                  <span class="skill-tag skill-tag-knowledge">SQL</span>
                   <span class="skill-tag skill-tag-knowledge">Python</span>
-                  <span class="skill-tag skill-tag-knowledge">HTML / CSS</span>
+                  <span class="skill-tag skill-tag-knowledge">SQL</span>
                   <span class="skill-tag skill-tag-knowledge">JavaScript</span>
+                  <span class="skill-tag skill-tag-knowledge">HTML / CSS</span>
                   <span class="skill-tag skill-tag-knowledge">Java</span>
                   <span class="skill-tag skill-tag-knowledge">C / C++</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frameworks & Backend -->
+          <div class="skill-category-block">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <ion-icon name="layers-outline"></ion-icon>
+              </div>
+              <h4 class="h4 skill-category-title">Frameworks &amp; Backend</h4>
+            </div>
+            <div class="skill-tags-wrapper content-card">
+              <div class="skill-level-group">
+                <span class="skill-level-label skill-level-knowledge">📘 Familiar</span>
+                <div class="skill-tags">
+                  <span class="skill-tag skill-tag-knowledge">Flutter (mobile &amp; web)</span>
+                  <span class="skill-tag skill-tag-knowledge">FastAPI</span>
+                  <span class="skill-tag skill-tag-knowledge">React</span>
+                  <span class="skill-tag skill-tag-knowledge">Node.js</span>
+                  <span class="skill-tag skill-tag-knowledge">SQLAlchemy</span>
+                  <span class="skill-tag skill-tag-knowledge">REST API design</span>
+                  <span class="skill-tag skill-tag-knowledge">JWT authentication</span>
                 </div>
               </div>
             </div>
@@ -545,22 +616,73 @@
             </div>
             <div class="skill-tags-wrapper content-card">
               <div class="skill-level-group">
-                <span class="skill-level-label skill-level-knowledge">📘 Knowledgeable</span>
+                <span class="skill-level-label skill-level-knowledge">📘 Familiar</span>
                 <div class="skill-tags">
-                  <span class="skill-tag skill-tag-knowledge">MySQL <small>(via DBeaver)</small></span>
+                  <span class="skill-tag skill-tag-knowledge">PostgreSQL (Supabase)</span>
+                  <span class="skill-tag skill-tag-knowledge">MySQL</span>
                   <span class="skill-tag skill-tag-knowledge">Firebase</span>
+                  <span class="skill-tag skill-tag-knowledge">ChromaDB <small>(vector database)</small></span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Tools & Technologies -->
+          <!-- AI / LLM -->
+          <div class="skill-category-block">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <ion-icon name="sparkles-outline"></ion-icon>
+              </div>
+              <h4 class="h4 skill-category-title">AI / LLM</h4>
+            </div>
+            <div class="skill-tags-wrapper content-card">
+              <div class="skill-level-group">
+                <span class="skill-level-label skill-level-knowledge">🛠 Hands-on experience</span>
+                <div class="skill-tags">
+                  <span class="skill-tag skill-tag-knowledge">RAG pipeline development <small>(embeddings, vector search, retrieval + generation)</small></span>
+                  <span class="skill-tag skill-tag-knowledge">Gemini API</span>
+                  <span class="skill-tag skill-tag-knowledge">Prompt engineering</span>
+                </div>
+              </div>
+              <div class="skill-level-group">
+                <span class="skill-level-label skill-level-knowledge">📘 Familiar</span>
+                <div class="skill-tags">
+                  <span class="skill-tag skill-tag-knowledge">PyThaiNLP</span>
+                  <span class="skill-tag skill-tag-knowledge">TF-IDF retrieval</span>
+                  <span class="skill-tag skill-tag-knowledge">RAG evaluation <small>(Hit Rate@k, MRR, LLM-as-judge faithfulness)</small></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DevOps & Deployment -->
+          <div class="skill-category-block">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <ion-icon name="cloud-upload-outline"></ion-icon>
+              </div>
+              <h4 class="h4 skill-category-title">DevOps &amp; Deployment</h4>
+            </div>
+            <div class="skill-tags-wrapper content-card">
+              <div class="skill-level-group">
+                <span class="skill-level-label skill-level-knowledge">📘 Familiar</span>
+                <div class="skill-tags">
+                  <span class="skill-tag skill-tag-knowledge">GitHub Actions (CI/CD)</span>
+                  <span class="skill-tag skill-tag-knowledge">Render</span>
+                  <span class="skill-tag skill-tag-knowledge">Firebase Hosting</span>
+                  <span class="skill-tag skill-tag-knowledge">Docker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
           <div class="skill-category-block">
             <div class="skill-category-header">
               <div class="skill-category-icon">
                 <ion-icon name="construct-outline"></ion-icon>
               </div>
-              <h4 class="h4 skill-category-title">Tools &amp; Technologies</h4>
+              <h4 class="h4 skill-category-title">Tools</h4>
             </div>
             <div class="skill-tags-wrapper content-card">
               <div class="skill-level-group">
@@ -569,14 +691,16 @@
                   <span class="skill-tag skill-tag-proficient">VS Code</span>
                   <span class="skill-tag skill-tag-proficient">Figma</span>
                   <span class="skill-tag skill-tag-proficient">Canva</span>
+                  <span class="skill-tag skill-tag-proficient">draw.io</span>
                 </div>
               </div>
               <div class="skill-level-group">
-                <span class="skill-level-label skill-level-knowledge">📘 Knowledgeable</span>
+                <span class="skill-level-label skill-level-knowledge">📘 Familiar</span>
                 <div class="skill-tags">
-                  <span class="skill-tag skill-tag-knowledge">Github</span>
-                  <span class="skill-tag skill-tag-knowledge">Docker</span>
-                  <span class="skill-tag skill-tag-knowledge">draw.io</span>
+                  <span class="skill-tag skill-tag-knowledge">Postman</span>
+                  <span class="skill-tag skill-tag-knowledge">DBeaver</span>
+                  <span class="skill-tag skill-tag-knowledge">GitHub</span>
+                  <span class="skill-tag skill-tag-knowledge">CapCut</span>
                 </div>
               </div>
             </div>
@@ -598,11 +722,9 @@
                 </div>
               </div>
               <div class="skill-level-group">
-                <span class="skill-level-label skill-level-knowledge">📘 Knowledgeable</span>
+                <span class="skill-level-label skill-level-knowledge">📘 Intermediate</span>
                 <div class="skill-tags">
-                  <span class="skill-tag skill-tag-knowledge">English <small>Limited Working Proficiency (Able to
-                      communicate,
-                      read, and write for general and technical purposes)</small></span>
+                  <span class="skill-tag skill-tag-knowledge">English <small>(technical reading and writing)</small></span>
                 </div>
               </div>
             </div>
@@ -685,6 +807,46 @@
 
           <ul class="project-list">
 
+            <!-- Mutelove -->
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://muteluv.web.app/" target="_blank" rel="noopener">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-mutelove.svg" alt="Mutelove – RAG Fortune-Telling App" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mutelove – RAG Fortune-Telling App</h3>
+
+                <p class="project-category">Applications + AI</p>
+                <p class="project-year">2026</p>
+
+              </a>
+            </li>
+
+            <!-- Pawject -->
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mypawject.tech/" target="_blank" rel="noopener">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-pawject.svg" alt="Pawject – Team Collaboration Platform" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Pawject – Team Collaboration Platform</h3>
+
+                <p class="project-category">Web development</p>
+                <p class="project-year">2026</p>
+
+              </a>
+            </li>
+
             <!-- Project 1 -->
             <li class="project-item  active" data-filter-item data-category="web development">
               <a href="https://github.com/mookmathu/My-Portfolio.git" target="_blank" rel="noopener">
@@ -740,7 +902,7 @@
                 <h3 class="project-title">Sound Monitor App</h3>
 
                 <p class="project-category">Applications + Web Demo</p>
-                <p class="project-year">2026</p>
+                <p class="project-year">2025</p>
 
               </a>
             </li>
@@ -992,7 +1154,7 @@
         <section class="contact-new">
 
           <p class="contact-new-intro">
-            Feel free to reach out — whether it's about a project, an internship opportunity, or just to say hi! 👋
+            Feel free to reach out — whether it's about a project, a job opportunity, or just to say hi! 👋
           </p>
 
           <!-- Contact Cards -->
@@ -1032,7 +1194,7 @@
               </div>
               <div class="contact-social-info">
                 <span class="contact-social-name">GitHub</span>
-                <span class="contact-social-handle">@imnotmathurada</span>
+                <span class="contact-social-handle">@mookmathu</span>
               </div>
               <div class="contact-social-badge">Visit Profile →</div>
             </a>
